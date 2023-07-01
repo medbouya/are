@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="module" client="site" method="upgrade">
+    <name>Carousel category articles</name>
+    <author>Mohamed Cheikh Malainine</author>
+    <description>Displays articles from given category.</description>
+    <version>1.0.0</version>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="category" type="category" extension="com_content" label="Select a category" description="Select the category to display articles from." />
+            </fieldset>
+        </fields>
+    </config>
+    <files>
+        <filename module="mod_carousel">mod_carousel.php</filename>
+        <filename>index.html</filename>
+    </files>
+</extension>

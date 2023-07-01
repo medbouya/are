@@ -1,0 +1,114 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "are",
+    "version": "4.0.0",
+    "description": "This file contains details of the assets used by ARE.",
+    "license": "GPL-2.0-or-later",
+    "assets": [
+  
+      {
+        "name": "template.are.bootstrap",
+        "description": "Using Bootstrap v4.2.1",
+        "type": "style",
+        "uri": "bootstrap.min.css",
+        "dependencies": [
+          "fontawesome"
+        ]
+      },
+      {
+        "name": "template.are.user",
+        "description": "The custom css style to use.",
+        "type": "style",
+        "uri": "user.css"
+      },
+      {
+        "name": "template.are.custom",
+        "type": "style",
+        "uri": "custom.min.css"
+      },
+      {
+        "name": "template.are.main",
+        "type": "style",
+        "uri": "main.min.css"
+      },
+      {
+        "name": "template.are.update",
+        "type": "style",
+        "uri": "update-last.css"
+      },
+      {
+        "name": "template.are.main",
+        "description": "The file containing the javascript for this template.",
+        "type": "script",
+        "uri": "main.min.js",
+        "attributes" : {
+          "defer": true
+        },
+        "dependencies": [
+          "core"
+        ]
+      },
+      {
+        "name": "template.are.bootstrapjs",
+        "type": "script",
+        "uri": "bootstrap.min.js"
+      },
+      {
+        "name": "template.are.bs",
+        "type": "script",
+        "uri": "bs-custom-file-input.min.js"
+      },
+      {
+        "name": "template.are.contact",
+        "type": "script",
+        "uri": "contact.min.js"
+      },
+      {
+        "name": "template.are.form",
+        "type": "script",
+        "uri": "form.min.js"
+      },
+      {
+        "name": "template.are.form-validate",
+        "type": "script",
+        "uri": "form-validate.min.js"
+      },
+      {
+        "name": "template.are.jquery",
+        "type": "script",
+        "uri": "jquery.min.js"
+      },
+      {
+        "name": "template.are.leaflet",
+        "type": "script",
+        "uri": "leaflet.min.js"
+      },
+      {
+        "name": "template.are.respond",
+        "type": "script",
+        "uri": "respond.min.js"
+      },
+
+      {
+        "name": "template.are.mainjs",
+        "type": "script",
+        "uri": "main.min.js"
+      },
+      {
+        "name": "template.are.popper",
+        "type": "script",
+        "uri": "popper.min.js"
+      },
+      {
+        "name": "searchtools",
+        "type": "style",
+        "uri": "system/searchtools/searchtools.min.css"
+      },
+      {
+        "name": "fontawesome",
+        "type": "style",
+        "uri": "system/joomla-fontawesome.min.css"
+      }
+    ]
+}
+  
