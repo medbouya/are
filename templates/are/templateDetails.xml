@@ -23,11 +23,14 @@
 	<positions>
 		<position>top-bar</position>
 		<position>header</position>
+		<position>language</position>
 		<position>logo</position>
 		<position>menu</position>
 		<position>slider</position>
 		<position>content-top</position>
 		<position>footer</position>
+		<position>social</position>
+		<position>copyright</position>
 		<position>sidebar</position>
 		<position>search</position>
 		<position>breadcrumbs</position>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/**
+ * @license		GNU General Public License v2.0
+ * @version 1.0.0
+ * @author Alexander Green
+ * @copyright (C) 2022- OSSKit.Net. All rights reserved.
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ */
+-->
+<extension type="module" method="upgrade" client="site">
+	<name>MOD_OSS_MEGAMENU</name>
+	<creationDate>Aug 2022</creationDate>
+	<author>Alex Green</author>
+	<authorEmail>alexgreen932@gmail.com</authorEmail>
+	<authorUrl>http://osskit.net</authorUrl>
+	<copyright>Copyright © 2022 - All rights reserved.</copyright>
+	<license>GNU General Public License v2.0</license>
+	<version>1.1.0</version>
+	<description>MOD_OSS_MEGAMENU_DESCRIPTION</description>
+	<files>
+		<filename module="mod_oss_megamenu">mod_oss_megamenu.php</filename>
+		<filename>helper.php</filename>
+		<filename>mod_oss_megamenu.xml</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files> 
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_oss_megamenu.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_oss_megamenu.ini</language>		
+		<language tag="uk-UA">uk-UA/uk-UA.mod_oss_megamenu.sys.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.mod_oss_megamenu.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_oss_megamenu.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_oss_megamenu.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_oss_megamenu.sys.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_oss_megamenu.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_oss_megamenu.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_oss_megamenu.ini</language>
+		<language tag="pl-PL">pl-PL/pl-PL.mod_oss_megamenu.sys.ini</language>
+		<language tag="pl-PL">pl-PL/pl-PL.mod_oss_megamenu.ini</language>
+		<language tag="cs-CZ">cs-CZ/cs-CZ.mod_oss_megamenu.sys.ini</language>
+		<language tag="cs-CZ">cs-CZ/cs-CZ.mod_oss_megamenu.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_oss_megamenu.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_oss_megamenu.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_oss_megamenu.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_oss_megamenu.ini</language>
+	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="OSS MegaMenu">http://osskit.net/updates/mega_lite.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_oss_megamenu/assets/fields">
+			<fieldset name="basic" addfieldprefix="Joomla\Component\Menus\Administrator\Field">
+				<field name="menutype" type="menu" label="MOD_MENU_FIELD_MENUTYPE_LABEL" clientid="0"/>
+				<field name="menuapp" type="app"/>
+				<!-- <field name="menutype" type="hidden"/> -->
+				<!-- <field name="menutype" type="text"/> -->
+
+				<field
+					name="base"
+					type="modal_menu"
+					label="MOD_MENU_FIELD_ACTIVE_LABEL"
+					select="true"
+					new="true"
+					edit="true"
+					clear="true"
+					filter="integer"
+					>
+					<option value="">JCURRENT</option>
+				</field>
+				<field name="startLevel" type="hidden" default="1"/>
+				<field name="endLevel" type="hidden" default="0"/>
+				<field name="showAllChildren" type="hidden" default="1"/>
+				<!-- <field name="select" type="button"/> -->
+			</fieldset>
+
+            <fieldset name="more" label="MOD_OSS_ADDITIONAL">
+            	<field name="note21" type="note" class="alert" label="MOD_OSS_NOTE_ADDITIONAL" description="MOD_OSS_NOTE_ADDITIONAL_DESC" />
+				<field name="mobile_friendly" type="radio" default="0" label="MOD_OSS_MOBILE" class="btn-group btn-group-yesno">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+				<field name="mobile_friendly_opt" type="radio" default="omm-mobile-offcanvas" label="MOD_OSS_MOB_OPT" class="btn-group" showon="mobile_friendly:1">
+				  <option value="omm-mobile-slider">Slider</option>
+				  <option value="omm-mobile-offcanvas">Offcanvas</option>
+				</field>
+				<field name="mobile_slider_title" type="radio" default="1" label="MOD_OSS_MOB_BUT" description="MOD_OSS_MOB_BUT_DESC" class="btn-group btn-group-yesno" showon="mobile_friendly:1[AND]mobile_friendly_opt:omm-mobile-slider">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+				<field name="fontawesome" type="radio" default="1" label="MOD_OSS_FONT_AWS" description="MOD_OSS_FONT_AWS_DESC" class="btn-group btn-group-yesno">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+				<field name="jquery" type="radio" default="1" label="MOD_OSS_JQUERY" description="MOD_OSS_JQUERY_DESC" class="btn-group btn-group-yesno">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+            	<field name="css_ovewride" type="textarea" rows="5" label="MOD_OSS_CSS" description="MOD_OSS_CSS_DESC" />
+            </fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+</fields>
+	</config>
+</extension>
